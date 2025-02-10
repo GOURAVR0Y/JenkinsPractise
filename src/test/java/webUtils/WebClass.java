@@ -15,9 +15,9 @@ public class WebClass {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
 		options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation","disable-infobars"));
-	     RemoteWebDriver	driver = new ChromeDriver(options);
-		driver.get("https://practicetestautomation.com/practice-test-login/");
-        Thread.sleep(2000);
+		RemoteWebDriver	driver = new ChromeDriver(options);
+		driver.get(System.getenv("BASE_URL"));
+		Thread.sleep(2000);
 		driver.findElement(By.id("username")).sendKeys("student");
 		Thread.sleep(2000);
 		driver.findElement(By.id("password")).sendKeys("Password123");
