@@ -25,7 +25,7 @@ public class WebClass {
 		driver.findElement(By.id("submit")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[text()='Log out']")).click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		driver.quit();
 
 	}
